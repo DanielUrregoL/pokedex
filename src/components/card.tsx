@@ -1,7 +1,15 @@
 import type { Pokemon } from "../interfaces"
 import { getTypeIcon } from '../utils'
 
-
+/*
+ * Card component for displaying Pokémon information
+ * Arguments:
+ * - pokemon: The Pokémon data to display
+ * - onClick: Function to call when the card is clicked
+ * Returns:
+ * - A card element with Pokémon details including ID, types, image, and name
+ * If no Pokémon data is provided, it displays a message indicating that no data is available.
+*/
 export function Card({ pokemon, onClick }: { pokemon: Pokemon, onClick: () => void }) {
   if (!pokemon) {
     return <div className="text-center mt-10 text-xl font-medium">No Pokémon data available</div>
@@ -32,7 +40,7 @@ export function Card({ pokemon, onClick }: { pokemon: Pokemon, onClick: () => vo
 
       {/* Image and name */}
       <div className="bg-white rounded-lg p-4 mt-4">
-        <img src={pokemon.sprites.front_default} alt={pokemon.name} className="mx-auto w-80 h-80" />
+        <img src={pokemon.sprites.front_default} alt={pokemon.name} className="w-80 h-80 object-contain" />
       </div>
       <h2 className="capitalize text-2xl font-bold mt-2">{pokemon.name}</h2>
     </div>

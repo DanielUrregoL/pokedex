@@ -1,10 +1,18 @@
 import { ChevronDoubleRightIcon, ChevronDoubleLeftIcon } from "@heroicons/react/16/solid"
 import type { PaginationProps } from '../interfaces'
 
-
+/*
+  * Pagination component for navigating through pages of items
+  * Arguments:
+  * - page: Current page number
+  * - totalPages: Total number of pages available
+  * - onPageChange: Function to call when the page changes
+  * Returns:
+  * - A set of buttons for navigating between pages, including arrows and numbered buttons
+*/
 export function Pagination({ page, totalPages, onPageChange }: PaginationProps) {
   return (
-    <div className="flex justify-center items-center gap-2 my-6 flex-wrap">
+    <div className="flex justify-center items-center gap-2 mt-10 flex-wrap">
       {/* Arrow left */}
       <button
         onClick={() => onPageChange(page - 1)}

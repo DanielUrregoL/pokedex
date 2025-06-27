@@ -1,6 +1,12 @@
 import type { Pokemon } from '../interfaces'
 
-
+/*
+  * PokemonStats component for displaying Pokémon base stats
+  * Arguments:
+  * - stats: Array of Pokémon stats to display
+  * Returns:
+  * - A section with each stat's name, value, and a progress bar indicating its relative strength
+*/
 export function PokemonStats({ stats }: { stats: Pokemon['stats'] }) {
   return (
     <div className="flex-1">

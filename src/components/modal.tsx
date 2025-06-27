@@ -3,7 +3,14 @@ import { XMarkIcon } from '@heroicons/react/16/solid'
 import { PokemonStats } from './pokemonStats';
 import type { Pokemon } from '../interfaces';
 
-
+/*
+ * Modal component for displaying detailed Pokémon information
+ * Arguments:
+ * - pokemon: The Pokémon data to display
+ * - onClose: Function to call when the modal is closed
+ * Returns:
+ * - A modal with Pokémon details including ID, image, types, basic data, and stats
+*/
 export function Modal({ pokemon, onClose }: { pokemon: Pokemon; onClose: () => void }) {
     return (
         <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-blur-sm bg-black/50">

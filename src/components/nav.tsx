@@ -1,7 +1,14 @@
 import { TableCellsIcon, Squares2X2Icon } from '@heroicons/react/24/solid'
 import type { NavProps } from '../interfaces'
 
-
+/* 
+ * Nav component for switching between table and grid views
+ * Arguments:
+ * - active: Current active view ('table' or 'grid')
+ * - onChange: Function to call when the view changes
+ * Returns:
+ * - A navigation bar with buttons to switch views
+*/
 export function Nav({ active, onChange }: NavProps) {
   return (
     <nav className="flex justify-center text-xl gap-6 p-4 bg-white shadow-md rounded-md">

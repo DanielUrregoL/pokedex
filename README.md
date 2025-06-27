@@ -1,69 +1,67 @@
-# React + TypeScript + Vite
+# 🚀 Pokédex - React + Tailwind + PokéAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Explora los 151 Pokémon de la primera generación en una interfaz moderna e interactiva construida con **React**, **TypeScript**, **Tailwind CSS** y **PokéAPI**. Incluye vista en tabla, cuadrícula responsive, filtrado por tipo con íconos, paginación y modal de detalles con estadísticas visuales.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Vistas del proyecto
 
-## Expanding the ESLint configuration
+![Vista de Grid](image.png)
+![Vista de Tabla](image-1.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌐 Demo en vivo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+🔗 [Ver demo en GitHub Pages](https://tuusuario.github.io/pokedex)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologías utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PokéAPI](https://pokeapi.co/)
+- [Heroicons](https://heroicons.com/)
+- [TanStack Table](https://tanstack.com/table)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## ⚙️ Instalación local
+
+Para correr la aplicación de manera local sigue estos pasos:
+
+### 1. Clona el repositorio
+
+git clone https://github.com/tuusuario/pokedex.git
+cd pokedex
+
+### 2. Instala las dependencias
+
+npm install
+
+### 3. Crea e archivo .env en la raiz del proyecto con este contenido
+
+POKEMON_API_URL=https://pokeapi.co/api/v2/pokemon?limit=151
+
+### 4. Por ultimo ejecuta el proyecto 
+
+npm run dev
+
+## 📁 Estructura principal del proyecto
+
+pokedex/
+├── public/
+|   ├── icons/          # Íconos de tipos
+├── src/
+│   ├── components/      # Componentes reutilizables 
+│   ├── hooks/           # Custom hooks (usePokemon)
+│   ├── interfaces/      # Tipado de datos
+│   ├── utils/           # Funciones auxiliares 
+│   └── App.tsx          # Componente principal
+├── .env
+├── package.json
+├── tailwind.config.js
+└── README.md

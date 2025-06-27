@@ -37,18 +37,18 @@ function App() {
   }
 
   return (
-    <div className="p-4 bg-gray-200 min-h-screen">
+    <div className="bg-gray-600 min-h-screen">
       <Nav active={view} onChange={setView} />
 
-      {/* Filtro por tipo */}
+      {/* Filter */}
       <Filter
         types={getUniqueTypes(pokemons)}
         selected={selectedTypes}
         onChange={setSelectedTypes}
       />
 
-      {/* Tabla o grid */}
-      <div className="mt-6">
+      {/* Component selected */}
+      <div className="mt-6 container mx-auto px-4">
         {view === 'table' && (
           <PokemonTable pokemons={currentPokemons} onSelect={handleCardClick} />
         )}
@@ -61,7 +61,12 @@ function App() {
         )}
       </div>
 
-      {/* Paginación */}
+      {/* Signature */}
+      <div className="text-center text-gray-300 my-6">
+        <p className="text-lg">by @DanielUL</p>
+      </div>
+
+      {/* Pagination */}
       <Pagination
         page={page}
         totalPages={totalPages}

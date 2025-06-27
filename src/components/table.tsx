@@ -13,6 +13,14 @@ import { EyeIcon, ChevronDoubleDownIcon, ChevronDoubleUpIcon } from '@heroicons/
 
 const columnHelper = createColumnHelper<Pokemon>()
 
+/*
+ * PokemonTable component for displaying a table of Pokémon data
+ * Arguments:
+ * - pokemons: Array of Pokémon data to display
+ * - onSelect: Function to call when a Pokémon row is selected
+ * Returns:
+ * - A table with sortable columns for various Pokémon attributes, including an image, name, types, weight, height, stats, and a button to view details
+*/
 export function PokemonTable({ pokemons, onSelect }: { pokemons: Pokemon[]; onSelect: (p: Pokemon) => void }) {
     const [sorting, setSorting] = useState<SortingState>([])
 
@@ -81,7 +89,7 @@ export function PokemonTable({ pokemons, onSelect }: { pokemons: Pokemon[]; onSe
             cell: info => (
                 <button
                     onClick={() => onSelect(info.row.original)}
-                    className="text-blue-600 cursor-pointer"
+                    className="text-blue-400 cursor-pointer"
                 >
                     <EyeIcon className="w-8 h-8" />
                 </button>
@@ -122,9 +130,9 @@ export function PokemonTable({ pokemons, onSelect }: { pokemons: Pokemon[]; onSe
                 </thead>
                 <tbody>
                     {table.getRowModel().rows.map(row => (
-                        <tr key={row.id} className="hover:bg-gray-100">
+                        <tr key={row.id} className="hover:bg-gray-500 transition duration-200">
                             {row.getVisibleCells().map(cell => (
-                                <td key={cell.id} className="px-2 py-2 text-center text-lg">
+                                <td key={cell.id} className="px-2 py-2 text-white text-center text-lg">
                                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                                 </td>
                             ))}
