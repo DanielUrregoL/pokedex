@@ -13,7 +13,7 @@ Explora los 151 Pokémon de la primera generación en una interfaz moderna e int
 
 ## 🌐 Demo en vivo
 
-🔗 [Ver demo en GitHub Pages](https://tuusuario.github.io/pokedex)
+🔗 [Ver demo](https://pokedex-zeta-weld.vercel.app/)
 
 ---
 
@@ -35,7 +35,7 @@ Para correr la aplicación de manera local sigue estos pasos:
 
 ### 1. Clona el repositorio
 
-git clone https://github.com/tuusuario/pokedex.git
+git clone https://github.com/DanielUrregoL/pokedex.git
 cd pokedex
 
 ### 2. Instala las dependencias
