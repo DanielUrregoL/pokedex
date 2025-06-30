@@ -35,7 +35,6 @@ Para correr la aplicación de manera local sigue estos pasos:
 
 ### 1. Clona el repositorio
 
-```bash
 git clone https://github.com/DanielUrregoL/pokedex.git
 cd pokedex
 
