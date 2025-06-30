@@ -52,9 +52,10 @@ npm run dev
 
 ## 📁 Estructura principal del proyecto
 
+```bash
 pokedex/
 ├── public/
-|   ├── icons/          # Íconos de tipos
+│   ├── icons/           # Íconos de tipos
 ├── src/
 │   ├── components/      # Componentes reutilizables 
 │   ├── hooks/           # Custom hooks (usePokemon)
@@ -65,3 +66,4 @@ pokedex/
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+
