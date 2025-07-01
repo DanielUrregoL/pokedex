@@ -34,7 +34,7 @@ Explora los 151 Pokémon de la primera generación en una interfaz moderna e int
 Para correr la aplicación de manera local sigue estos pasos:
 
 ### 1. Clona el repositorio
-
+```bash
 git clone https://github.com/DanielUrregoL/pokedex.git
 cd pokedex
 
@@ -49,7 +49,7 @@ POKEMON_API_URL=https://pokeapi.co/api/v2/pokemon?limit=151
 ### 4. Por ultimo ejecuta el proyecto 
 
 npm run dev
-
+```
 ---
 
 ## 📁 Estructura principal del proyecto
